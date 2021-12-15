@@ -1,0 +1,39 @@
+.container {
+  .headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .headerItem {
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .parent {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    .child {
+      height: auto;
+      .line {
+        height: 50px;
+        margin: 2px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: #009678;
+        border-bottom: 1px solid #f0f0f0;
+        .lineItem {
+          text-align: center;
+        }
+      }
+      .line:hover {
+        background-color: #fafafa;
+      }
+    }
+  }
+  .parent::-webkit-scrollbar {
+    display: none;
+  }
+}
