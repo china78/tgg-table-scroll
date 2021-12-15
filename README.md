@@ -33,13 +33,14 @@ props目前有4个: width, height, columns, data,
 |platName          |`平台名称`            |string            |-
 |cpIndex          |`综合指数`            |string            |-
     const columns: ColumnsType = [
-	    { order:1 platName:'mockData1111111',cpIndex:'0.4857' },
-	    { order:2 platName:'mockData2222222',cpIndex:'0.3956' },
-	    { order:3 platName:'mockData3333333',cpIndex:'0.3615' },
-	    { order:4 platName:'mockData4444444',cpIndex:'0.4857' },
-	    { order:5 platName:'mockData5555555',cpIndex:'0.3165' },
-	    { order:6 platName:'mockData6666666',cpIndex:'0.517' },
-	    { order:7 platName:'mockData7777777',cpIndex:'0.6111 },
-	    { order:8 platName:'mockData8888888',cpIndex:'0.3591' },
-	    { order:9 platName:'mockData9999999',cpIndex:'0.2166' },
+	    { order:1, platName:'mockData1111111',cpIndex:'0.4857' },
+	    { order:2, platName:'mockData2222222',cpIndex:'0.3956' },
+	    { order:3, platName:'mockData3333333',cpIndex:'0.3615' },
+	    { order:4, platName:'mockData4444444',cpIndex:'0.4857' },
+	    { order:5, platName:'mockData5555555',cpIndex:'0.3165' },
+	    { order:6, platName:'mockData6666666',cpIndex:'0.517' },
+	    { order:7, platName:'mockData7777777',cpIndex:'0.6111 },
+	    { order:8, platName:'mockData8888888',cpIndex:'0.3591' },
+	    { order:9, platName:'mockData9999999',cpIndex:'0.2166' },
     ]
+![Image text](https://raw.githubusercontent.com/china78/tgg-table-scroll/main/src/assets/demo.png)
