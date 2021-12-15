@@ -1,17 +1,21 @@
 {
   "name": "tgg-table-scroll",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "一个table滚动的组件-react",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "compile": "npx babel src --out-dir lib",
+    "deploy": "gh-pages -d example/dist",
+    "publish-demo": "npm run build && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/china78/tgg-table-scroll.git"
   },
-  "author": "",
+  "author": "tiangg",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/china78/tgg-table-scroll/issues"
@@ -36,6 +40,7 @@
     "cssnano": "^5.0.8",
     "execa": "^5.1.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "inquirer": "^8.2.0",
     "less": "^4.1.2",

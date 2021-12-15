@@ -3,6 +3,10 @@
 项目内部有个table的滚动需求，
 于是封装了一个，方便以后再用，语言是react
 
+    npm install tgg-table-scroll
+    yarn add tgg-table-scroll
+
+
 ## Props
 
 props目前有4个: width, height, columns, data,
@@ -13,6 +17,8 @@ props目前有4个: width, height, columns, data,
 |height          |`组件的高度`            |number            |250
 |columns          |`表格列的配置`|ColumnsType[]|-
 |data          |`数据数组`|object[]|-
+
+
 
 ## ColumnsType[]
 列配置项是固定的，目前必传字段 name 和 width
@@ -25,6 +31,8 @@ props目前有4个: width, height, columns, data,
 	    { name: '平台名称', width: '50%' },
 	    { name: '综合指数, width: '30%' },
     ]
+
+
 ## Data[]
 数据配置项【不是固定的字段】，用户可根据自己业务的需求，【随意传入】需要的字段，代码内部做了遍历，列项将全部渲染出来，以下是个示例:
 |            API    |说明                          |类型                       |默认值
@@ -43,4 +51,5 @@ props目前有4个: width, height, columns, data,
 	    { order:8, platName:'mockData8888888',cpIndex:'0.3591' },
 	    { order:9, platName:'mockData9999999',cpIndex:'0.2166' },
     ]
+
 ![Image text](https://raw.githubusercontent.com/china78/tgg-table-scroll/main/src/assets/demo.png)
