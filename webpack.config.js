@@ -9,7 +9,23 @@ module.exports = {
   entry: path.join(__dirname, "./src/index.js"),
   output: {
     path: path.join(__dirname, "lib"),
-    filename: "index.js"
+    filename: "index.js",
+    library: 'TggTableScroll',
+    libraryTarget: 'umd',
+  },
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'ReactDOM',
+    },
   },
   module: {
     rules: [

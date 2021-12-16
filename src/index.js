@@ -18,7 +18,7 @@ const d = [
   { order: 9, platName: 'mock数据9999999999999999', cpIndex: '0.216' }
 ]
 const TggTableScroll = (props) => {
-  const { columns = c, data = d, width = '100%', height = 250 } = props;
+  const { columns = c, data = d, width = '100%', height = 250, listItemHeight = 50, handleHover, currentTopIndex } = props;
   const [isScrolle, setIsScrolle] = useState(true);
   // 滚动速度，值越小，滚动越快
   const speed = 30;
@@ -33,11 +33,16 @@ const TggTableScroll = (props) => {
     let timer;
     if (isScrolle) {
       timer = setInterval(
-        () =>
+        () => {
           warper.current.scrollTop >= childDom1.current.scrollHeight
             ? (warper.current.scrollTop = 0)
-            : warper.current.scrollTop++,
-        speed
+            : warper.current.scrollTop++;
+          const index = parseInt(String(warper.current.scrollTop / listItemHeight)) + 1;
+          if (index <= data.length) {
+            console.log('index: ', index)
+            currentTopIndex && currentTopIndex(index);
+          }
+        }, speed
       );
     }
     return () => {
@@ -45,11 +50,14 @@ const TggTableScroll = (props) => {
     };
   }, [isScrolle, data]);
 
-  const hoverHandler = (flag) => setIsScrolle(flag);
+  const hoverHandler = (flag, item) => {
+    setIsScrolle(flag);
+    handleHover && handleHover(item.key);
+  };
 
   return (
     <div className={styles.container} style={{ width, height }}>
-      <div className={styles.headerBox} style={{ width: '100%', height: 55, backgroundColor: '#f2f5fb' }}>
+      <div className={styles.headerBox} style={{ width: '100%', height: 50, backgroundColor: '#f2f5fb' }}>
         {
           columns.map((item, index) => (
             <div
@@ -70,9 +78,11 @@ const TggTableScroll = (props) => {
           {data && data.map((item, index) => (
             <div
               key={index}
+              ref={itemDom}
               className={styles.line}
-              onMouseOver={() => hoverHandler(false)}
-              onMouseLeave={() => hoverHandler(true)}
+              style={{ height: listItemHeight }}
+              onMouseOver={() => hoverHandler(false, item)}
+              onMouseLeave={() => hoverHandler(true, item)}
             >
               {
                 Object.keys(item).map((ele, key) => (
