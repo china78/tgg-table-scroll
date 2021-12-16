@@ -78,7 +78,6 @@ const TggTableScroll = (props) => {
           {data && data.map((item, index) => (
             <div
               key={index}
-              ref={itemDom}
               className={styles.line}
               style={{ height: listItemHeight }}
               onMouseOver={() => hoverHandler(false, item)}
