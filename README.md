@@ -13,27 +13,27 @@
 
 props目前有4个: width, height, columns, data,
 
-|            API    |说明     | 必填  |类型                       |默认值
-|----------|---------------------|--------------|---------------|-------------------------------
-|width|`组件的宽度`     |false       |string            |'100%'
-|height          |`组件的高度`  |false          |number            |250
-|listItemHeight          |`listItem高度`     |false      |number            |50
-|columns          |`表格列的配置`|false |ColumnsType[]|-
-|data          |`数据数组`|false |object[]|-
-|handleHover          |`hover事件回调key`|false |Function|-
-|currentTopIndex          |`回调顶部listItem key` |false|Function|- 
+  |            API    |说明     | 必填  |类型                       |默认值
+  |----------|---------------------|--------------|---------------|-------------------------------
+  |width|`组件的宽度`     |false       |string            |'100%'
+  |height          |`组件的高度`  |false          |number            |250
+  |listItemHeight          |`listItem高度`     |false      |number            |50
+  |columns          |`表格列的配置`|false |ColumnsType[]|-
+  |data          |`数据数组`|false |object[]|-
+  |handleHover          |`hover事件回调key`|false |Function|-
+  |currentTopIndex          |`回调顶部listItem key` |false|Function|- 
 
-  
-
-
-  
+<br>
+ 
 ## ColumnsType[]
 列配置项是固定的，目前必传字段 name 和 width
+
 |             API   |说明                          |类型                       |默认值
 |----------------|-------------------------------|-----------------------------|-------------------------------
 |name|`列名称`            |string            |-
 |width          |`列的宽度`            |string            |-
-  
+
+<br>  
 
 
     const columns: ColumnsType = [
@@ -44,12 +44,16 @@ props目前有4个: width, height, columns, data,
     
 ## Data[]
 数据配置项【不是固定的字段】，用户可根据自己业务的需求，【随意传入】需要的字段，代码内部做了遍历，列项将全部渲染出来，以下是个示例:
+
+<br>
+
 |            API    |说明                          |类型                       |默认值
 |----------------|-------------------------------|-----------------------------|-------------------------------
 |order|`排名`            |string|            |-
 |platName          |`平台名称`            |string            |-
 |cpIndex          |`综合指数`            |string            |-
-  
+
+<br>  
 
     const columns: ColumnsType = [
 	    { order:1 platName:'mockData1111111',cpIndex:'0.4857' },
@@ -75,5 +79,6 @@ props目前有4个: width, height, columns, data,
 	    currentTopIndex={currentTopIndex}
     />
   
-  
+<br>
+
 ![Image text](https://raw.githubusercontent.com/china78/tgg-table-scroll/main/src/assets/demo.png)
