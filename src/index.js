@@ -18,7 +18,7 @@ const d = [
   { order: 9, platName: 'mock数据9999999999999999', cpIndex: '0.216' }
 ]
 const TggTableScroll = (props) => {
-  const { columns = c, data = d, width = '100%', height = 250, listItemHeight = 50, handleHover, currentTopIndex } = props;
+  const { columns = c, data = d, width = '100%', height = 250, listItemHeight = 50, handleHover, currentTopIndex, clickHandler } = props;
   const [isScrolle, setIsScrolle] = useState(true);
   // 滚动速度，值越小，滚动越快
   const speed = 30;
