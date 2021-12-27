@@ -4857,10 +4857,10 @@ terser@^5.10.0, terser@^5.7.2:
     source-map "~0.7.2"
     source-map-support "~0.5.20"
 
-tgg-table-scroll@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmmirror.com/tgg-table-scroll/download/tgg-table-scroll-1.0.2.tgz#ac281d194b26903f38df49ced978d9d6b23446a4"
-  integrity sha512-1rsIahuwfLc24zyGQZKSAsZAIsmbTUaWNWzP+QCKeUeybp7ADqF8ue2sKVRqC3ilzQ9M1cQYVHtnYHNxkAXSKA==
+tgg-table-scroll@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmmirror.com/tgg-table-scroll/download/tgg-table-scroll-1.0.9.tgz#bbafcc2aaa62897d6d67afdadcfb2158172fbab6"
+  integrity sha512-ZM6anwX8M3A2+Jj6aE9QaO1o2Z948T4gvie2UrNvwp0J4cBF/dmp2W0nUgQuUD+72RjoMyabSf93A55lc2kk7A==
 
 through@^2.3.6:
   version "2.3.8"
