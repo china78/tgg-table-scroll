@@ -1,6 +1,6 @@
 {
   "name": "tgg-table-scroll",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "一个table滚动的组件-react",
   "main": "lib/index.js",
   "scripts": {
