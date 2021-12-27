@@ -5,10 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d example/dist",
-    "publish-demo": "npm run build && npm run deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",

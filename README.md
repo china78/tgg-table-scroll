@@ -77,6 +77,7 @@ props目前有4个: width, height, columns, data,
 	    data={addKey(shortParkList)}
 	    handleHover={handleHover}
 	    currentTopIndex={currentTopIndex}
+      clickHandler={clickHandler}
     />
   
 <br>

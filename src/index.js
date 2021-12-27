@@ -82,6 +82,7 @@ const TggTableScroll = (props) => {
               style={{ height: listItemHeight }}
               onMouseOver={() => hoverHandler(false, item)}
               onMouseLeave={() => hoverHandler(true, item)}
+              onClick={() => clickHandler && clickHandler(item)}
             >
               {
                 Object.keys(item).map((ele, key) => (
